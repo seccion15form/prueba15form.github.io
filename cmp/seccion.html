@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selección Unica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+      <style>
+            html {font-family: sans-serif; text-align: center}
+            body {display: inline-block; text-align: left}
+            *:required, .obligatorio, form em {border: thin solid blue}
+            output {font-weight: bold}
+            footer {font-size: small}
+        </style>
+    </head>
+    <body>
+        <form id="forma" action="javascript:;">
+            <p>El borde azul indica obligatorio</p>
+            <p>
+                <label accesskey="I">
+                    <input name="camisetaVerde" type="checkbox">
+                    Trae Camiseta Verde
+                </label>
+            </p>
+            <p>
+                <label accesskey="A">
+                    Años<br>
+                    <select name="edad" required size="7">
+                        <option value="NINHO">0 a 10</option>
+                        <option value="ADOLESCENTE">11 a 14</option>
+                        <option value="JOVEN">15 a 17</option>
+                        <option value="ADULTO">18 a 40</option>
+                        <optgroup label="Mayores">
+                            <option value="MADURO">40 a 59</option>
+                            <option value="TERCERA_EDAD">60 en adelante</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </p>
+            <fieldset class="obligatotio">
+                <legend>Sexo</legend>
+                <p>
+                    <label>
+                        <input type="radio" name="sexo" value="masculino">
+                        Masculino
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="sexo" value="femenino">
+                        Femenino
+                    </label>
+                </p>
+            </fieldset>
+            <p>
+                <label accesskey="D">
+                    Día<br>
+                    <select name="dia" required>
+                        <option value="">Selecciona Día</option>
+                        <option>Viernes</option>
+                        <option>Sábado</option>
+                        <option>Domingo</option>
+                    </select>
+                </label>
+            </p>
+            <p><input type="submit" value="Cotizar" accesskey="C"></p>
+            <p><output id="salida"></output></p>
+        </form>
+        <footer>
+           Copyright Yo
+        </footer>
+        <script src="js/CtrlCotiza.js"></script>
+    </body>
+</html>
